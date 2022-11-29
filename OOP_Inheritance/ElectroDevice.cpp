@@ -50,27 +50,32 @@ ElectroDevice::ElectroDevice(const string& _os, const string& _proc, const strin
 // задание процессора
 void ElectroDevice::set_proc(const string& _proc)
 {
+	if (_proc == "") throw invalid_argument("Error: field _proc is empty");
 	proc = _proc;
 }
 
 void ElectroDevice::set_graph_accel(const string& _graph_accel)
 {
+	if (_graph_accel == "") throw invalid_argument("Error: field _graph_accel is empty");
 	graph_accel = _graph_accel;
 }
 
 // задание ќѕ
 void ElectroDevice::set_opsystem(const string &_os) {
+	if (_os == "") throw invalid_argument("Error: field _os is empty");
 	os = _os;
 }
 
 // задание производител€
 void ElectroDevice::set_maker(const string &_maker) {
+	if (_maker == "") throw invalid_argument("Error: field _maker is empty");
 	maker = _maker;
 }
 
 // задание модели
 void ElectroDevice::set_model(const string &_model)
 {
+	if (_model == "") throw invalid_argument("Error: field _model is empty");
 	model = _model;
 }
 
@@ -86,18 +91,21 @@ void ElectroDevice::set_year(int _year) {
 // задание кол - ва оперативной пам€ти
 void ElectroDevice::set_ram_size(int _size)
 {
+	if (_size <= 0) throw invalid_argument("Error: field _size error");
 	ram.size = _size;
 }
 
 // задание кол-ва посто€нной пам€ти
 void ElectroDevice::set_storage_memory_size(int _size)
 {
+	if (_size <= 0) throw invalid_argument("Error: field _size error");
 	storage_memory.size = _size;
 }
 
 //
 void ElectroDevice::set_diagonal(const double& _diagonal)
 {
+	if (_diagonal <= 0) throw invalid_argument("Error: field _size error");
 	diagonal = _diagonal;
 }
 

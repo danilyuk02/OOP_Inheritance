@@ -30,7 +30,8 @@ public:
 		unit_measur = _unit_measur;
 	}
 };
-
+/// 
+/// Класс мобильное устройство
 class ElectroDevice
 {
 protected:

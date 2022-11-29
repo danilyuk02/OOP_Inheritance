@@ -4,7 +4,7 @@
 
 #include <string>
 #include "ElectroDevice.h"
-
+///Класс смартфон
 class Smartphone :
     public ElectroDevice
 {

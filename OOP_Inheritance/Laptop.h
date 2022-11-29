@@ -6,6 +6,8 @@
 
 #include "ElectroDevice.h"
 
+
+///Класс ноутбук
 class Laptop : public ElectroDevice
 {
 private:

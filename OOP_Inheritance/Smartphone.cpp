@@ -46,12 +46,14 @@ Smartphone::Smartphone(const string& _maker, const string& _os, const string& _m
 // основная камера
 void Smartphone::set_main_camera(const string& m_camera)
 {
+	if (m_camera == "") throw invalid_argument("Error: field m_camera is empty");
 	main_camera = m_camera;
 }
 
 // сеть
 void Smartphone::set_network(const string& _network)
 {
+	if (_network == "") throw invalid_argument("Error: field _network is empty");
 	network = _network;
 }
 

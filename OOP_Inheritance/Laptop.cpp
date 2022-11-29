@@ -30,6 +30,7 @@ Laptop::Laptop(const string& _os, const string& _maker, const string& _model)
 // задание типа
 void Laptop::set_type(const string& name)
 {
+	if (name == "") throw invalid_argument("Error: field name is empty");
 	type = name;
 }
 
